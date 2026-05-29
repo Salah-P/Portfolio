@@ -6,6 +6,13 @@ const themeToggle = document.getElementById("themeToggle");
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
+const certCards = document.querySelectorAll(".cert-card");
+const certModal = document.getElementById("certModal");
+const closeCert = document.getElementById("closeCert");
+const modalTitle = document.getElementById("modalTitle");
+const modalIssuer = document.getElementById("modalIssuer");
+const modalCode = document.getElementById("modalCode");
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     loader.classList.add("hidden");
@@ -19,7 +26,6 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const scrollPercent = (scrollTop / docHeight) * 100;
-
   progress.style.width = `${scrollPercent}%`;
 });
 
@@ -34,33 +40,62 @@ window.addEventListener("mousemove", e => {
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
-
-  themeToggle.textContent =
-    document.body.classList.contains("light") ? "🌙" : "☀";
+  themeToggle.textContent = document.body.classList.contains("light") ? "🌙" : "☀";
 });
 
 /* Reveal Animations */
 
 const revealItems = document.querySelectorAll(
-  ".reveal, .skill-card, .timeline-item, .edu-card, .cert-card"
+  ".reveal, .skill-card, .project-card, .timeline-item, .edu-card, .cert-card"
 );
 
 const revealObserver = new IntersectionObserver(
   entries => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+        setTimeout(() => {
+          entry.target.classList.add("show");
+
+          if (entry.target.classList.contains("timeline-item")) {
+            entry.target.closest(".timeline").classList.add("show-line");
+          }
+        }, index * 90);
       }
     });
   },
-  {
-    threshold: 0.18
-  }
+  { threshold: 0.16 }
 );
 
 revealItems.forEach(item => revealObserver.observe(item));
 
-/* Particle Background */
+/* Certification Modal */
+
+certCards.forEach(card => {
+  card.addEventListener("click", () => {
+    modalTitle.textContent = card.dataset.title;
+    modalIssuer.textContent = card.dataset.issuer;
+    modalCode.textContent = card.dataset.code;
+    certModal.classList.add("active");
+  });
+});
+
+closeCert.addEventListener("click", () => {
+  certModal.classList.remove("active");
+});
+
+certModal.addEventListener("click", e => {
+  if (e.target === certModal) {
+    certModal.classList.remove("active");
+  }
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    certModal.classList.remove("active");
+  }
+});
+
+/* Particles */
 
 let particles = [];
 
@@ -71,7 +106,6 @@ function resizeCanvas() {
 
 function createParticles() {
   particles = [];
-
   const count = Math.floor(window.innerWidth / 18);
 
   for (let i = 0; i < count; i++) {
