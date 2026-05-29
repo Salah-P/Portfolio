@@ -1,391 +1,273 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salah Asif Parbhulkar | AI & ML Portfolio</title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-:root {
-  --bg: #0f0f14;
-  --card: rgba(24, 24, 32, 0.78);
-  --text: #ffffff;
-  --muted: #cfcfcf;
-  --accent: #8b5cf6;
-  --accent-soft: #a78bfa;
-  --border: rgba(255, 255, 255, 0.1);
-}
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body.light {
-  --bg: #f5f3ff;
-  --card: rgba(255, 255, 255, 0.82);
-  --text: #16131f;
-  --muted: #4b465c;
-  --border: rgba(0, 0, 0, 0.1);
-}
+  <div id="loader">
+    <div class="loader-logo">SP</div>
+    <div class="loader-bar"><span></span></div>
+    <p>Loading Portfolio...</p>
+  </div>
 
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-  transition: background 0.4s, color 0.4s;
-}
+  <div class="progress"></div>
+  <div class="cursor-glow"></div>
+  <canvas id="particles"></canvas>
 
-#particles {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-}
+  <main id="content">
 
-.cursor-glow {
-  position: fixed;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(139,92,246,0.35), transparent 65%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
+    <nav>
+      <h2>Salah.</h2>
 
-.progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 0%;
-  background: var(--accent);
-  z-index: 1000;
-}
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Tech</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Academics</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-/* Loader */
+      <button id="themeToggle">☀</button>
+    </nav>
 
-#loader {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  z-index: 9999;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
+    <section class="hero reveal">
+      <div>
+        <p class="tag">Emerging AI & ML Professional</p>
+        <h1>Hi, I’m <span>Salah Asif Parbhulkar</span></h1>
+        <p>
+          Data-driven AI Engineer focused on LLM systems, agentic workflows,
+          model benchmarking, scalable APIs, and practical AI solutions.
+        </p>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </section>
 
-#loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+    <section id="about" class="section reveal">
+      <h2>About Me</h2>
+      <p>
+        I build and evaluate offline AI pipelines under real-world constraints
+        such as latency, throughput, memory, and privacy. My work includes
+        structured LLM generation, FastAPI services, geospatial AI, model
+        benchmarking, automation, and applied machine learning systems.
+      </p>
+    </section>
 
-.loader-logo {
-  width: 85px;
-  height: 85px;
-  border-radius: 24px;
-  display: grid;
-  place-items: center;
-  font-size: 1.7rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), #ec4899);
-  animation: pulse 1.3s infinite alternate;
-}
+    <section id="skills" class="section reveal">
+      <h2>Tech Capabilities</h2>
 
-.loader-bar {
-  width: 220px;
-  height: 6px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: #2a2a35;
-}
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h3>AI / ML</h3>
+          <p>LLMs, LangChain, Model Evaluation, Scikit-learn, TensorFlow, Feature Engineering, Geospatial AI</p>
+          <div class="skill-bar"><span style="--level: 90%"></span></div>
+        </div>
 
-.loader-bar span {
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: var(--accent);
-  animation: loading 1.2s ease forwards;
-}
+        <div class="skill-card">
+          <h3>Backend & Programming</h3>
+          <p>Python, Java, C#, FastAPI, Flask, REST APIs, HTML, CSS</p>
+          <div class="skill-bar"><span style="--level: 88%"></span></div>
+        </div>
 
-#loader p {
-  color: var(--muted);
-}
+        <div class="skill-card">
+          <h3>Data & Analytics</h3>
+          <p>SQL, MySQL, Pandas, NumPy, Power BI, Excel, Matplotlib, Seaborn</p>
+          <div class="skill-bar"><span style="--level: 84%"></span></div>
+        </div>
 
-@keyframes loading {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
+        <div class="skill-card">
+          <h3>Tools & Platforms</h3>
+          <p>Ollama, GitHub, Jupyter Notebook, Unity Hub, CUDA, Azure AI Foundry, Copilot Studio</p>
+          <div class="skill-bar"><span style="--level: 82%"></span></div>
+        </div>
+      </div>
+    </section>
 
-@keyframes pulse {
-  from { transform: scale(0.95) rotate(-3deg); }
-  to { transform: scale(1.05) rotate(3deg); }
-}
+    <section id="projects" class="section reveal">
+      <h2>Personal Projects</h2>
 
-/* Layout */
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Local LLM Benchmarking & Evaluation System</h3>
+          <p>
+            Built an offline benchmarking system for Llama 3.2 3B, Phi-4 Mini,
+            and Mistral 7B using identical hardware. Measured tokens/sec,
+            time to first token, latency, memory usage, and output quality.
+          </p>
+          <span>Python · Ollama · FastAPI · Pydantic · NumPy · Pandas · Matplotlib</span>
+        </div>
 
-#content {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 1s ease;
-}
+        <div class="project-card">
+          <h3>Line Follower Robot</h3>
+          <p>
+            Programmed autonomous line-tracking behavior using a QTR-8A sensor
+            array and ultrasonic obstacle detection to stop and resume movement safely.
+          </p>
+          <span>Python · Robotics · Sensors · Automation</span>
+        </div>
+      </div>
+    </section>
 
-#content.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    <section id="experience" class="section reveal">
+      <h2>Experience</h2>
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 22px 8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(15, 15, 20, 0.72);
-  backdrop-filter: blur(18px);
-  z-index: 100;
-  border-bottom: 1px solid var(--border);
-}
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Interdisciplinary Research Intern</h3>
+          <span>Lockheed Martin CISS · Abu Dhabi · Oct 2025 - Present</span>
+          <p>
+            Developing Unity simulations for product demonstrations, adding UI
+            functionality, and building an AI-powered constrained LLM system
+            with GPT-OSS-20B, Ollama, JSONPatch, and FastAPI.
+          </p>
+        </div>
 
-body.light nav {
-  background: rgba(245, 243, 255, 0.78);
-}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Intern</h3>
+          <span>4i Apps Solutions · Dubai · May 2025 - Sep 2025</span>
+          <p>
+            Configured payroll definitions, HR/payroll documentation, DFFs,
+            offboarding workflows, AI Assist, and HCM Digital Assistant features.
+          </p>
+        </div>
 
-nav h2 {
-  color: var(--text);
-}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Intern</h3>
+          <span>Conneqtion Group · Dubai · Jan 2025 - May 2025</span>
+          <p>
+            Worked on Oracle Fusion HCM, employee records, approval workflows,
+            HDL bulk uploads, REST APIs, and PL/SQL validation.
+          </p>
+        </div>
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Intern</h3>
+          <span>Smart Navigation Systems · Abu Dhabi · Jan 2025 - Apr 2025</span>
+          <p>
+            Worked on indoor routing, BLE integration, ESP32 programming,
+            geospatial AI in ArcGIS, Flask APIs, Twilio, and digital twins.
+          </p>
+        </div>
 
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Intern</h3>
+          <span>DMCC · Dubai · Jun 2023 - Aug 2023</span>
+          <p>
+            Worked on Oracle Fusion modules, custom BI reports, Salesforce CRM,
+            Service Cloud, and Community Cloud exposure.
+          </p>
+        </div>
 
-nav a:hover {
-  color: var(--accent-soft);
-}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Intern</h3>
+          <span>Finesse Dubai · Dubai · Jul 2022 - Aug 2022</span>
+          <p>
+            Built RPA bots using Automation Anywhere and extracted HTML data
+            using DOM XPath and loops.
+          </p>
+        </div>
+      </div>
+    </section>
 
-#themeToggle {
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  padding: 10px 13px;
-  border-radius: 50%;
-  cursor: pointer;
-}
+    <section id="education" class="section reveal">
+      <h2>Academic History</h2>
 
-/* Hero */
+      <div class="edu-card">
+        <h3>BSc Computer Science</h3>
+        <span>United Arab Emirates University</span>
+        <p>Aug 2021 - May 2025 · CGPA: 3.36 / 4.00 · Al Ain, UAE</p>
+      </div>
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-  background:
-    radial-gradient(circle at top right, rgba(139,92,246,0.35), transparent 38%),
-    radial-gradient(circle at bottom left, rgba(236,72,153,0.22), transparent 35%);
-}
+      <div class="edu-card">
+        <h3>The Indian High School</h3>
+        <span>Dubai, Oud Metha</span>
+        <p>Senior School Certificate: 91.6% · Secondary School Certificate: 90.2%</p>
+      </div>
+    </section>
 
-.tag {
-  color: var(--accent-soft);
-  margin-bottom: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+    <section id="certifications" class="section reveal">
+      <h2>Certifications</h2>
+      <p class="section-subtitle">Click any certificate to preview it.</p>
 
-h1 {
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  margin-bottom: 20px;
-}
+      <div class="cert-grid">
+        <div class="cert-card" data-title="PCEP-Certified Entry-Level Python Programmer" data-issuer="Python Institute" data-code="[PCEP-30-01]">
+          <div class="cert-mini">PY</div>
+          <h3>PCEP Python</h3>
+          <p>Python Institute</p>
+        </div>
 
-h1 span {
-  color: var(--accent);
-}
+        <div class="cert-card" data-title="PCAP-Certified Associate in Python Programming" data-issuer="Python Institute" data-code="[PCAP-31-03]">
+          <div class="cert-mini">PY</div>
+          <h3>PCAP Python</h3>
+          <p>Python Institute</p>
+        </div>
 
-.hero p,
-.section p {
-  max-width: 720px;
-  color: var(--muted);
-  font-size: 1.15rem;
-  line-height: 1.8;
-}
+        <div class="cert-card" data-title="Salesforce Certified Associate" data-issuer="Trailhead" data-code="Salesforce">
+          <div class="cert-mini">SF</div>
+          <h3>Salesforce Associate</h3>
+          <p>Trailhead</p>
+        </div>
 
-.btn {
-  display: inline-block;
-  margin-top: 32px;
-  padding: 15px 30px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: 0.3s;
-}
+        <div class="cert-card" data-title="Salesforce Certified Administrator" data-issuer="Trailhead" data-code="Salesforce">
+          <div class="cert-mini">SF</div>
+          <h3>Salesforce Admin</h3>
+          <p>Trailhead</p>
+        </div>
 
-.btn:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(139, 92, 246, 0.45);
-}
+        <div class="cert-card" data-title="Oracle Fusion AI Agent Studio Foundations Associate" data-issuer="Oracle" data-code="1Z0-1145-0">
+          <div class="cert-mini">OR</div>
+          <h3>Oracle AI Agent Studio</h3>
+          <p>Oracle</p>
+        </div>
 
-/* Sections */
+        <div class="cert-card" data-title="Microsoft Azure AI Fundamentals" data-issuer="Microsoft" data-code="Azure AI">
+          <div class="cert-mini">AZ</div>
+          <h3>Azure AI Fundamentals</h3>
+          <p>Microsoft</p>
+        </div>
+      </div>
+    </section>
 
-.section {
-  padding: 120px 8%;
-}
+    <section id="contact" class="section reveal">
+      <h2>Links & Contact Information</h2>
 
-.section h2 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  margin-bottom: 40px;
-}
+      <div class="contact-links">
+        <a href="mailto:salah.asif2@gmail.com">salah.asif2@gmail.com</a>
+        <a href="tel:+971552257085">+971 552257085</a>
+        <a href="https://linkedin.com/in/salah-parbhulkar-bb4530216" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Salah-P" target="_blank">GitHub</a>
+        <a href="#">UAE / India</a>
+      </div>
+    </section>
 
-.skill-grid,
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-}
+  </main>
 
-.skill-card,
-.edu-card,
-.cert-card,
-.timeline-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 28px;
-  backdrop-filter: blur(16px);
-  transition: 0.35s;
-}
+  <div class="cert-modal" id="certModal">
+    <div class="cert-modal-card">
+      <button id="closeCert">×</button>
+      <div class="cert-preview-large" id="modalCode">CERT</div>
+      <h2 id="modalTitle">Certificate Title</h2>
+      <p id="modalIssuer">Issuer</p>
+      <span>Certificate preview placeholder</span>
+    </div>
+  </div>
 
-.skill-card:hover,
-.edu-card:hover,
-.cert-card:hover,
-.timeline-item:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent);
-}
-
-.skill-card h3,
-.edu-card h3,
-.timeline-item h3 {
-  margin-bottom: 10px;
-  color: var(--accent-soft);
-}
-
-.skill-bar {
-  margin-top: 18px;
-  height: 8px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.skill-bar span {
-  display: block;
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent), #ec4899);
-  border-radius: 999px;
-  transition: width 1.2s ease;
-}
-
-.skill-card.show .skill-bar span {
-  width: var(--level);
-}
-
-.timeline {
-  border-left: 2px solid var(--accent);
-  padding-left: 30px;
-}
-
-.timeline-item {
-  margin-bottom: 28px;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 34px;
-  width: 16px;
-  height: 16px;
-  background: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 20px var(--accent);
-}
-
-.timeline-item span,
-.edu-card span {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: var(--accent-soft);
-}
-
-.cert-card {
-  text-align: center;
-  font-weight: 600;
-}
-
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-.contact-links a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 26px;
-  background: var(--accent);
-  border-radius: 999px;
-  transition: 0.3s;
-}
-
-.contact-links a:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
-}
-
-/* Reveal Animation */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(55px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile */
-
-@media (max-width: 850px) {
-  nav {
-    padding: 18px 6%;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hero,
-  .section {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-
-  .cursor-glow {
-    display: none;
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
