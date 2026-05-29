@@ -1,0 +1,241 @@
+export const profile = {
+  name: "Salah Asif Parbhulkar",
+  shortName: "Salah",
+  initials: "SP",
+  title: "Emerging AI & ML Professional",
+  location: "UAE / India",
+  email: "salah.asif2@gmail.com",
+  phone: "+971 552257085",
+  github: "https://github.com/Salah-P",
+  linkedin: "https://linkedin.com/in/salah-parbhulkar-bb4530216",
+  summary:
+    "Data-driven AI Engineer with hands-on experience in LLM systems, agentic workflows, model benchmarking, scalable APIs, and offline AI pipelines built under real-world constraints such as latency, throughput, memory, and privacy.",
+};
+
+export const roles = [
+  "AI Engineer",
+  "ML Engineer",
+  "LLM Systems Developer",
+  "Backend Developer",
+  "Research Intern",
+];
+
+export const skills = [
+  {
+    category: "AI / ML",
+    items: [
+      "LLMs",
+      "LangChain",
+      "Model Evaluation",
+      "Scikit-learn",
+      "TensorFlow",
+      "Feature Engineering",
+      "Geospatial AI",
+      "ArcGIS",
+    ],
+    level: 90,
+  },
+  {
+    category: "Backend & Programming",
+    items: ["Python", "Java", "C#", "FastAPI", "Flask", "REST APIs", "HTML", "CSS"],
+    level: 88,
+  },
+  {
+    category: "Data & Analytics",
+    items: ["SQL", "MySQL", "Pandas", "NumPy", "Power BI", "Excel", "Matplotlib", "Seaborn"],
+    level: 84,
+  },
+  {
+    category: "Tools & Platforms",
+    items: [
+      "Ollama",
+      "Git",
+      "GitHub",
+      "Jupyter Notebook",
+      "Unity Hub",
+      "CUDA",
+      "Azure AI Foundry",
+      "Copilot Studio",
+    ],
+    level: 82,
+  },
+];
+
+export const projects = [
+  {
+    title: "Local LLM Benchmarking & Evaluation System",
+    description:
+      "Developed an offline benchmarking system to evaluate Llama 3.2 3B, Phi-4 Mini, and Mistral 7B on identical hardware. Measured tokens/sec, time to first token, total latency, memory usage, and output quality.",
+    highlights: [
+      "Implemented structured JSON output enforcement using Pydantic.",
+      "Added retry logic for deterministic generation.",
+      "Conducted temperature-based variance analysis across 30–50 prompts.",
+    ],
+    tech: ["Python", "Ollama", "FastAPI", "Pydantic", "NumPy", "Pandas", "Matplotlib"],
+  },
+  {
+    title: "Line Follower Robot",
+    description:
+      "Built autonomous robot behavior for line tracking, obstacle detection, and automatic stopping/resuming using Python and sensor-based control logic.",
+    highlights: [
+      "Programmed QTR-8A sensor array line tracking.",
+      "Integrated ultrasonic obstacle detection.",
+      "Optimized autonomous navigation across curves and corners.",
+    ],
+    tech: ["Python", "Robotics", "Sensors", "Automation"],
+  },
+];
+
+export const experience = [
+  {
+    role: "Interdisciplinary Research Intern",
+    company: "Lockheed Martin CISS",
+    location: "Abu Dhabi",
+    period: "Oct 2025 - Present",
+    points: [
+      "Developing simulations for product demonstration systems used at airshows and tradeshows using Unity Hub.",
+      "Added UI features and functional interaction systems.",
+      "Developed an AI-powered system using constrained LLM generation with GPT-OSS-20B and Ollama.",
+      "Implemented an agentic editing pipeline using JSONPatch and FastAPI.",
+    ],
+  },
+  {
+    role: "Intern",
+    company: "4i Apps Solutions",
+    location: "Dubai",
+    period: "May 2025 - Sep 2025",
+    points: [
+      "Configured payroll definitions, elements, ICPs, and tested payroll components.",
+      "Created HR/payroll documentation and customized DFFs.",
+      "Designed offboarding workflows and enabled AI Assist and HCM Digital Assistant features.",
+    ],
+  },
+  {
+    role: "Intern",
+    company: "Conneqtion Group",
+    location: "Dubai",
+    period: "Jan 2025 - May 2025",
+    points: [
+      "Configured Core HR, Absence Management, enterprise structures, and approval workflows in Oracle Fusion HCM.",
+      "Managed employee records, roles, AORs, and bulk uploads with HDL.",
+      "Applied REST APIs and PL/SQL for HCM data integration and validation.",
+    ],
+  },
+  {
+    role: "Intern",
+    company: "Smart Navigation Systems",
+    location: "Abu Dhabi",
+    period: "Jan 2025 - Apr 2025",
+    points: [
+      "Worked on indoor routing, BLE integration, and ESP32 programming.",
+      "Applied geospatial AI in ArcGIS.",
+      "Built real-time APIs with Flask and Twilio.",
+      "Gained experience with digital twin technology for urban planning and simulations.",
+    ],
+  },
+  {
+    role: "Intern",
+    company: "DMCC",
+    location: "Dubai",
+    period: "Jun 2023 - Aug 2023",
+    points: [
+      "Worked on Oracle Fusion modules including Core HR, Absence, Performance, Recruitment, and Payroll.",
+      "Developed custom BI reports.",
+      "Gained exposure to Salesforce CRM, Service Cloud, and Community Cloud.",
+    ],
+  },
+  {
+    role: "Intern",
+    company: "Finesse Dubai",
+    location: "Dubai",
+    period: "Jul 2022 - Aug 2022",
+    points: [
+      "Built scalable RPA bots using Automation Anywhere.",
+      "Automated workflows and extracted data from HTML pages using DOM XPath and loops.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "United Arab Emirates University",
+    location: "Al Ain, Abu Dhabi, UAE",
+    period: "Aug 2021 - May 2025",
+    result: "CGPA: 3.36 / 4.00",
+  },
+  {
+    degree: "Senior School Certificate Examination",
+    institution: "The Indian High School",
+    location: "Dubai, Oud Metha, UAE",
+    period: "Apr 2017 - Jun 2021",
+    result: "Senior School: 91.6% · Secondary School: 90.2%",
+  },
+];
+
+export const certifications = [
+  {
+    title: "PCEP-Certified Entry-Level Python Programmer",
+    issuer: "Python Institute",
+    code: "PCEP-30-01",
+    abbreviation: "PY",
+    image: "/certificates/pcep-placeholder.png",
+  },
+  {
+    title: "PCAP-Certified Associate in Python Programming",
+    issuer: "Python Institute",
+    code: "PCAP-31-03",
+    abbreviation: "PY",
+    image: "/certificates/pcap-placeholder.png",
+  },
+  {
+    title: "Salesforce Certified Associate",
+    issuer: "Trailhead",
+    code: "Salesforce",
+    abbreviation: "SF",
+    image: "/certificates/salesforce-associate-placeholder.png",
+  },
+  {
+    title: "Salesforce Certified Administrator",
+    issuer: "Trailhead",
+    code: "Salesforce",
+    abbreviation: "SF",
+    image: "/certificates/salesforce-admin-placeholder.png",
+  },
+  {
+    title: "Oracle Fusion AI Agent Studio Foundations Associate",
+    issuer: "Oracle",
+    code: "1Z0-1145-0",
+    abbreviation: "OR",
+    image: "/certificates/oracle-placeholder.png",
+  },
+  {
+    title: "Microsoft Azure AI Fundamentals",
+    issuer: "Microsoft",
+    code: "Azure AI",
+    abbreviation: "AZ",
+    image: "/certificates/azure-placeholder.png",
+  },
+];
+
+export const awards = [
+  {
+    title: "Vibe Coding Hackathon",
+    organizer: "NYU Abu Dhabi and NYU Shanghai",
+    result: "Second Place - Launch Track",
+    date: "Nov 2025",
+    description:
+      "Built an application that allowed university students to carpool and earn additional income.",
+  },
+  {
+    title: "FINSPIRE 1.0 Hackathon",
+    organizer: "ACM BPDC Chapter @ BITS Pilani",
+    result: "First Place",
+    date: "Oct 2025",
+    description:
+      "Built Ripple, an AI-powered web app analyzing how oil price and currency shifts impact investment portfolios across the GCC.",
+    tech: ["Next.js", "TypeScript", "Flask", "Python", "Ollama LLM"],
+  },
+];
+
+export const languages = ["English", "Urdu", "Hindi", "Arabic"];
