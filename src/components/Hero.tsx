@@ -131,14 +131,14 @@ export default function Hero() {
             </div>
 
             <div className="glass-card rounded-3xl p-5">
-              <p className="text-4xl font-black text-white">2</p>
+              <p className="text-4xl font-black text-white">3</p>
               <p className="mt-2 text-sm text-zinc-400">
                 Hackathon Wins
               </p>
             </div>
 
             <div className="glass-card rounded-3xl p-5">
-              <p className="text-4xl font-black text-white">6</p>
+              <p className="text-4xl font-black text-white">7</p>
               <p className="mt-2 text-sm text-zinc-400">
                 Certifications
               </p>

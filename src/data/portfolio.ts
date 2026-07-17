@@ -74,6 +74,17 @@ export const projects = [
     tech: ["Python", "Ollama", "FastAPI", "Pydantic", "NumPy", "Pandas", "Matplotlib"],
   },
   {
+    title: "Titanic Survival Analysis",
+    description:
+      "Performed exploratory data analysis (EDA) and predictive modeling on the Titanic dataset to identify key factors influencing passenger survival. Conducted data cleaning, feature engineering, and statistical analysis to uncover survival trends by age, gender, class, and family size.",
+    highlights: [
+      "Performed data cleaning, feature engineering, and statistical analysis to uncover survival trends by age, gender, class, and family size.",
+      "Built predictive models using Scikit-learn to classify passenger survival with high accuracy.",
+      "Visualized insights with Matplotlib and Seaborn, presenting survival distributions and correlations in clear, interpretable charts.",
+    ],
+    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+  },
+  {
     title: "Line Follower Robot",
     description:
       "Built autonomous robot behavior for line tracking, obstacle detection and automatic stopping/resuming using Python and sensor based control logic.",
