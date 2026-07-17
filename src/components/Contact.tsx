@@ -7,8 +7,8 @@ import {
   Check,
   Mail,
   Phone,
-  // Github,
-  Users,
+  ExternalLink,
+  Globe,
   Download,
   MapPin,
 } from "lucide-react";
@@ -29,17 +29,17 @@ const contactItems = [
     href: `tel:${profile.phone.replaceAll(" ", "")}`,
     icon: Phone,
   },
-  // {
-  //   label: "GitHub",
-  //   value: "github.com/Salah-P",
-  //   href: profile.github,
-  //   icon: ArrowDown,
-  // },
+  {
+    label: "GitHub",
+    value: "github.com/Salah-P",
+    href: profile.github,
+    icon: ExternalLink,
+  },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/salah-parbhulkar-bb4530216",
     href: profile.linkedin,
-    icon: Users,
+    icon: Globe,
   },
 ];
 

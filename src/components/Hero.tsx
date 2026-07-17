@@ -1,13 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
-import { ArrowRight, Download, ExternalLink, Globe } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 import { profile, roles } from "@/data/portfolio";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0.4]);
+  const cardsY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,16 +29,31 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-28">
-      {/* Background Grid */}
-      <div className="grid-background absolute inset-0" />
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-screen items-center overflow-hidden pt-28"
+    >
+      {/* Background Grid - Parallax */}
+      <motion.div
+        style={{ y: backgroundY }}
+        className="grid-background absolute inset-0"
+      />
 
-      {/* Glow Effects */}
-      <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-violet-600/10 blur-3xl" />
+      {/* Glow Effects - Parallax */}
+      <motion.div
+        style={{ y: glowY }}
+        className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-violet-600/10 blur-3xl"
+      />
 
-      <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-3xl" />
+      <motion.div
+        style={{ y: glowY }}
+        className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-3xl"
+      />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+      <motion.div
+        style={{ y: contentY, opacity }}
+        className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10"
+      >
         {/* Left Side */}
         <div className="max-w-3xl">
           <motion.p
@@ -71,58 +97,11 @@ export default function Hero() {
             {profile.summary}
           </motion.p>
 
-          {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45 }}
-            className="mt-10 flex flex-wrap gap-4"
-          >
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:scale-105"
-            >
-              View Projects
-              <ArrowRight size={18} />
-            </a>
-
-            <a
-              href="/resume/Salah_CV.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-white transition hover:border-violet-500"
-            >
-              <Download size={18} />
-              Resume
-            </a>
-          </motion.div>
-
-          {/* Socials */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-10 flex gap-4"
-          >
-              <a
-              href={profile.github}
-              target="_blank"
-              className="rounded-xl border border-white/10 p-3 text-zinc-300 transition hover:border-violet-500 hover:text-white"
-            >
-              <ExternalLink size={22} />
-            </a>
-
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              className="rounded-xl border border-white/10 p-3 text-zinc-300 transition hover:border-violet-500 hover:text-white"
-            >
-              <Globe size={22} />
-            </a>
-          </motion.div>
         </div>
 
-        {/* Right Side */}
+        {/* Right Side - Parallax */}
         <motion.div
+          style={{ y: cardsY }}
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
@@ -173,7 +152,7 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

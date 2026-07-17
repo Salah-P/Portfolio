@@ -227,13 +227,23 @@ export const certifications = [
 
 export const awards = [
   {
-    title: "Vibe Coding Hackathon",
-    organizer: "NYU Abu Dhabi and NYU Shanghai",
-    result: "Second Place - Launch Track",
-    date: "Nov 2025",
+    title: "Hackathon: Abu Dhabi AI PropTech Challenge",
+    organizer: "Cursor & eVoost AI",
+    result: "5th Place - Track 4: Decision Intelligence",
+    date: "Jun 2026",
     description:
-      "Built an application that allowed university students to carpool and earn additional income.",
-    tech: ["Next.js", "TypeScript", "React", "Google Maps API", "Tailwind CSS"],
+      "Built Hakim AI, a real-time talking AI avatar that sits between raw city data and the decision-maker. Ask a question out loud and it runs live analysis over Abu Dhabi proptech datasets, returning a clear, grounded, sourced result. Built with Anam.ai SDK for real-time avatar, Next.js frontend with FastAPI/Python sidecar for data analysis using pandas over CSV datasets, and OpenAI as the code agent LLM.",
+    tech: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Anam.ai SDK",
+      "Python",
+      "FastAPI",
+      "pandas",
+      "OpenAI",
+    ],
   },
   {
     title: "FINSPIRE 1.0 Hackathon",
@@ -241,8 +251,17 @@ export const awards = [
     result: "First Place",
     date: "Oct 2025",
     description:
-      "Built Ripple, an AI-powered web app analyzing how oil price and currency shifts impact investment portfolios across the GCC.",
-    tech: ["Next.js", "TypeScript", "Flask", "Python", "Ollama LLM"],
+      "Built Ripple Analytics, a comprehensive portfolio risk analysis platform designed specifically for UAE investors to understand how oil prices, currency movements, and global market forces impact their investments. Features include an Oil Price Impact Radar for real-time WTI and Brent crude tracking with sector sensitivity heatmaps, Currency Exchange Analysis across USD, EUR, AED, JPY, CNY with historical visualization, UAE-Specific Insights with economic benefit scoring and AED strength analysis, and AI-powered analysis via Ollama for portfolio risk assessment and personalized investment insights.",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Flask", "Python", "Ollama", "Recharts", "Google Maps API"],
+  },
+  {
+    title: "Vibe Coding Hackathon — Poolara",
+    organizer: "NYU Abu Dhabi and NYU Shanghai",
+    result: "Second Place - Launch Track",
+    date: "Nov 2025",
+    description:
+      "Built Poolara, a vibrant student-first campus ridesharing platform that helps students share rides, split costs, and build community. Features include ride sharing/finding for classes, events, and weekend trips, automatic cost splitting, .edu email verification for safety, and integration with Google Maps API for directions and autocomplete. Built with Next.js 16, React 19, Tailwind CSS with a custom playful palette (purple, magenta, coral, navy), Radix UI components, React Hook Form with Zod validation, and optimized for performance and accessibility (WCAG AA).",
+    tech: ["Next.js 16", "TypeScript", "React 19", "Tailwind CSS", "Google Maps API", "Radix UI", "React Hook Form", "Zod"],
   },
 ];
 
