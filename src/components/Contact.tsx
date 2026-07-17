@@ -7,8 +7,8 @@ import {
   Check,
   Mail,
   Phone,
-  Github,
-  Linkedin,
+  // Github,
+  Users,
   Download,
   MapPin,
 } from "lucide-react";
@@ -29,17 +29,17 @@ const contactItems = [
     href: `tel:${profile.phone.replaceAll(" ", "")}`,
     icon: Phone,
   },
-  {
-    label: "GitHub",
-    value: "github.com/Salah-P",
-    href: profile.github,
-    icon: Github,
-  },
+  // {
+  //   label: "GitHub",
+  //   value: "github.com/Salah-P",
+  //   href: profile.github,
+  //   icon: ArrowDown,
+  // },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/salah-parbhulkar-bb4530216",
     href: profile.linkedin,
-    icon: Linkedin,
+    icon: Users,
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Contact() {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Let’s build something intelligent."
+      title="Let's build something intelligent."
       description="Reach out for AI engineering, ML systems, backend API, automation, or research-focused opportunities."
     >
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">

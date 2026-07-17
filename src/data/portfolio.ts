@@ -65,18 +65,18 @@ export const projects = [
   {
     title: "Local LLM Benchmarking & Evaluation System",
     description:
-      "Developed an offline benchmarking system to evaluate Llama 3.2 3B, Phi-4 Mini, and Mistral 7B on identical hardware. Measured tokens/sec, time to first token, total latency, memory usage, and output quality.",
+      "Developed an offline benchmarking system to evaluate Llama 3.2 3B, Phi-4 Mini, and Mistral 7B on identical hardware. Measured tokens/sec, time to first token, total latency, memory usage and output quality.",
     highlights: [
       "Implemented structured JSON output enforcement using Pydantic.",
       "Added retry logic for deterministic generation.",
-      "Conducted temperature-based variance analysis across 30–50 prompts.",
+      "Conducted temperature-based variance analysis across 30 - 50 prompts.",
     ],
     tech: ["Python", "Ollama", "FastAPI", "Pydantic", "NumPy", "Pandas", "Matplotlib"],
   },
   {
     title: "Line Follower Robot",
     description:
-      "Built autonomous robot behavior for line tracking, obstacle detection, and automatic stopping/resuming using Python and sensor-based control logic.",
+      "Built autonomous robot behavior for line tracking, obstacle detection and automatic stopping/resuming using Python and sensor based control logic.",
     highlights: [
       "Programmed QTR-8A sensor array line tracking.",
       "Integrated ultrasonic obstacle detection.",
@@ -176,44 +176,44 @@ export const education = [
 export const certifications = [
   {
     title: "PCEP-Certified Entry-Level Python Programmer",
+    abbreviation: "PCEP",
     issuer: "Python Institute",
     code: "PCEP-30-01",
-    abbreviation: "PY",
     image: "/certificates/pcep-placeholder.png",
   },
   {
     title: "PCAP-Certified Associate in Python Programming",
+    abbreviation: "PCAP",
     issuer: "Python Institute",
     code: "PCAP-31-03",
-    abbreviation: "PY",
     image: "/certificates/pcap-placeholder.png",
   },
   {
     title: "Salesforce Certified Associate",
+    abbreviation: "SF Assoc",
     issuer: "Trailhead",
     code: "Salesforce",
-    abbreviation: "SF",
     image: "/certificates/salesforce-associate-placeholder.png",
   },
   {
     title: "Salesforce Certified Administrator",
+    abbreviation: "SF Admin",
     issuer: "Trailhead",
     code: "Salesforce",
-    abbreviation: "SF",
     image: "/certificates/salesforce-admin-placeholder.png",
   },
   {
     title: "Oracle Fusion AI Agent Studio Foundations Associate",
+    abbreviation: "Oracle AI",
     issuer: "Oracle",
     code: "1Z0-1145-0",
-    abbreviation: "OR",
     image: "/certificates/oracle-placeholder.png",
   },
   {
     title: "Microsoft Azure AI Fundamentals",
+    abbreviation: "Azure AI",
     issuer: "Microsoft",
-    code: "Azure AI",
-    abbreviation: "AZ",
+    code: "AI-901",
     image: "/certificates/azure-placeholder.png",
   },
 ];
@@ -226,6 +226,7 @@ export const awards = [
     date: "Nov 2025",
     description:
       "Built an application that allowed university students to carpool and earn additional income.",
+    tech: ["Next.js", "TypeScript", "React", "Google Maps API", "Tailwind CSS"],
   },
   {
     title: "FINSPIRE 1.0 Hackathon",

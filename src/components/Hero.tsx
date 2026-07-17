@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Download, ExternalLink, Globe } from "lucide-react";
 
 import { profile, roles } from "@/data/portfolio";
 
@@ -103,12 +103,12 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="mt-10 flex gap-4"
           >
-            <a
+              <a
               href={profile.github}
               target="_blank"
               className="rounded-xl border border-white/10 p-3 text-zinc-300 transition hover:border-violet-500 hover:text-white"
             >
-              <Github size={22} />
+              <ExternalLink size={22} />
             </a>
 
             <a
@@ -116,7 +116,7 @@ export default function Hero() {
               target="_blank"
               className="rounded-xl border border-white/10 p-3 text-zinc-300 transition hover:border-violet-500 hover:text-white"
             >
-              <Linkedin size={22} />
+              <Globe size={22} />
             </a>
           </motion.div>
         </div>
