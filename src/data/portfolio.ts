@@ -102,7 +102,7 @@ export const experience = [
     role: "Interdisciplinary Research Intern",
     company: "Lockheed Martin CISS",
     location: "Abu Dhabi",
-    period: "Oct 2025 - Present",
+    period: "Oct 2025 - May 2026",
     points: [
       "Developing simulations for product demonstration systems used at airshows and tradeshows using Unity Hub.",
       "Added UI features and functional interaction systems.",
