@@ -14,10 +14,8 @@ export const profile = {
 
 export const roles = [
   "AI Engineer",
-  "ML Engineer",
-  "LLM Systems Developer",
-  "Backend Developer",
-  "Research Intern",
+  "Software Developer",
+  "Oracle Fusion HCM Consultant"
 ];
 
 export const skills = [
@@ -62,6 +60,16 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    title: "Job Aggregation & CV Matching Platform",
+    description:
+      "Built a job aggregation platform using Python, FastAPI, Trigger.dev and Supabase, with a background scraping pipeline for WeWorkRemotely jobs.",
+    highlights: [
+      "Implemented caching, database level deduplication, REST APIs and asynchronous scraping workflows for reliable job processing.",
+      "Added an LLM powered CV matching system using Ollama to extract candidate profiles and rank jobs by relevance.",
+    ],
+    tech: ["Python", "FastAPI", "Supabase", "PostgreSQL", "Trigger.dev", "Ollama"],
+  },
   {
     title: "Local LLM Benchmarking & Evaluation System",
     description:
