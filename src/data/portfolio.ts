@@ -2,7 +2,7 @@ export const profile = {
   name: "Salah Asif Parbhulkar",
   shortName: "Salah",
   initials: "SP",
-  title: "Emerging AI & ML Professional",
+  title: "Oracle Fusion Consultant",
   location: "UAE / India",
   email: "salah.asif2@gmail.com",
   phone: "+971 552257085",
@@ -15,7 +15,7 @@ export const profile = {
 export const roles = [
   "AI Engineer",
   "Software Developer",
-  "Oracle Fusion HCM Consultant"
+  "Oracle Fusion Consultant"
 ];
 
 export const skills = [
@@ -66,11 +66,12 @@ export const skills = [
     level: 84,
   },
   {
-    category: "Oracle Fusion HCM",
+    category: "Oracle Fusion",
     items: [
       "Core HR",
       "Payroll",
       "Absence Management",
+      "Procurement",
       "Fast Formulas",
       "AI Agent Studio",
       "HCM Digital Assistant",
@@ -80,7 +81,7 @@ export const skills = [
       "REST APIs",
       "PL/SQL",
     ],
-    level: 86,
+    level: 87,
   },
 ];
 
@@ -152,6 +153,7 @@ export const experience = [
       "Configured payroll definitions, elements, ICPs, and tested payroll components.",
       "Created HR/payroll documentation and customized DFFs.",
       "Designed offboarding workflows and enabled AI Assist and HCM Digital Assistant features.",
+      "Explored and configured Oracle AI Agent Studio to build and customize AI agents for HR workflows, enabling intelligent assistance and automation across HCM processes.",
     ],
   },
   {
